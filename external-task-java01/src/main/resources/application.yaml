@@ -1,0 +1,15 @@
+server:
+  port: 8081
+camunda:
+  rest:
+    url: http://localhost:8080/engine-rest
+  bpm:
+    client:
+      async-response-timeout: 20000
+      base-url: http://localhost:8080/engine-rest
+      max-tasks: 1
+      lock-duration: 10000
+      worker-id: java-client
+spring:
+  application:
+    name: external-task-starter-java
